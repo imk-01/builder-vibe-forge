@@ -18,7 +18,7 @@ export interface User {
   id: number;
   username: string;
   email: string;
-  role: 'admin' | 'ketua' | 'ppl' | 'pml';
+  role: "admin" | "ketua" | "ppl" | "pml";
   name: string;
 }
 
@@ -29,7 +29,11 @@ export interface PPL {
   id?: number;
   namaPPL: string;
   namaPML: string;
-  tahap: 'persiapan' | 'pengumpulan-data' | 'pengolahan-analisis' | 'diseminasi-evaluasi';
+  tahap:
+    | "persiapan"
+    | "pengumpulan-data"
+    | "pengolahan-analisis"
+    | "diseminasi-evaluasi";
   bebanKerja: string;
   satuanBebanKerja: string;
   hargaSatuan: string;
@@ -46,9 +50,13 @@ export interface PPL {
 export interface Dokumen {
   id?: number;
   nama: string;
-  tipe: 'persiapan' | 'pengumpulan-data' | 'pengolahan-analisis' | 'diseminasi-evaluasi';
+  tipe:
+    | "persiapan"
+    | "pengumpulan-data"
+    | "pengolahan-analisis"
+    | "diseminasi-evaluasi";
   isWajib: boolean;
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Approved' | 'Rejected';
+  status: "Draft" | "Submitted" | "Under Review" | "Approved" | "Rejected";
   filePath?: string;
   uploadedAt?: string;
   uploadedBy?: string;
@@ -62,9 +70,14 @@ export interface Kegiatan {
   namaKegiatan: string;
   namaKetua: string;
   deskripsiKegiatan?: string;
-  status: 'Persiapan' | 'Pengumpulan Data' | 'Pengolahan & Analisis' | 'Diseminasi & Evaluasi' | 'Selesai';
+  status:
+    | "Persiapan"
+    | "Pengumpulan Data"
+    | "Pengolahan & Analisis"
+    | "Diseminasi & Evaluasi"
+    | "Selesai";
   progressKeseluruhan?: number;
-  
+
   // Schedule dates for each phase
   tanggalMulaiPersiapan?: string;
   tanggalSelesaiPersiapan?: string;
@@ -74,11 +87,11 @@ export interface Kegiatan {
   tanggalSelesaiPengolahanAnalisis?: string;
   tanggalMulaiDiseminasiEvaluasi?: string;
   tanggalSelesaiDiseminasiEvaluasi?: string;
-  
+
   // Related data
   ppl: PPL[];
   dokumen: Dokumen[];
-  
+
   // Metadata
   lastUpdated: string;
   lastUpdatedBy?: string;

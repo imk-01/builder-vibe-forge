@@ -1,7 +1,14 @@
-import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle } from 'lucide-react';
+import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { AlertTriangle } from "lucide-react";
 
 interface ConfirmationModalProps {
   isOpen: boolean;
@@ -11,7 +18,7 @@ interface ConfirmationModalProps {
   description: string;
   confirmText?: string;
   cancelText?: string;
-  variant?: 'destructive' | 'default';
+  variant?: "destructive" | "default";
 }
 
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
@@ -20,9 +27,9 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
   onClose,
   title,
   description,
-  confirmText = 'Konfirmasi',
-  cancelText = 'Batal',
-  variant = 'destructive'
+  confirmText = "Konfirmasi",
+  cancelText = "Batal",
+  variant = "destructive",
 }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

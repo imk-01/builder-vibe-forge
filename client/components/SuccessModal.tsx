@@ -1,6 +1,12 @@
-import React, { useEffect } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { CheckCircle } from 'lucide-react';
+import React, { useEffect } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { CheckCircle } from "lucide-react";
 
 interface SuccessModalProps {
   isOpen: boolean;
@@ -15,7 +21,7 @@ const SuccessModal: React.FC<SuccessModalProps> = ({
   onClose,
   title,
   description,
-  autoCloseDelay
+  autoCloseDelay,
 }) => {
   useEffect(() => {
     if (isOpen && autoCloseDelay) {

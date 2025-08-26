@@ -1,7 +1,14 @@
-import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { AlertCircle } from 'lucide-react';
+import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { AlertCircle } from "lucide-react";
 
 interface AlertModalProps {
   isOpen: boolean;
@@ -14,7 +21,7 @@ const AlertModal: React.FC<AlertModalProps> = ({
   isOpen,
   onClose,
   title,
-  description
+  description,
 }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -33,9 +40,7 @@ const AlertModal: React.FC<AlertModalProps> = ({
           </div>
         </DialogHeader>
         <DialogFooter>
-          <Button onClick={onClose}>
-            OK
-          </Button>
+          <Button onClick={onClose}>OK</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
